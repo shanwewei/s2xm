@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap-theme.css" />
+    <script src="bootstrap/bootstrap/js/jquery-1.11.2.min.js"></script>
+    <script src="bootstrap/bootstrap/js/bootstrap.js"></script>
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body style="margin:20px">
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-xs-4 col-xs-offset-4" style="min-width:300px">
+          <div class="form-group" style="text-align:center">
+          <img src="bootstrap/homework/logo.png"/>
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+          <ul class="nav nav-tabs" role="tablist" id="myTab">
+              <li role="presentation" class="active col-md-6" style="padding-left:0;padding-right:0;text-align:center;font-size:20px"><a href="#login" aria-controls="home" role="tab" data-toggle="tab" style="margin-right:0"><span class="glyphicon glyphicon-circle-arrow-right" style="padding-right:10px"></span>Login</a></li>
+              <li role="presentation" style="padding-left:0;padding-right:0;text-align:center;font-size:20px" class="col-md-6"><a href="#register" aria-controls="profile" role="tab" data-toggle="tab" style="margin-right:0"><span class="glyphicon glyphicon-plus-sign" style="padding-right:10px"></span>Register</a></li>
+           </ul>
+           </div>
+       <div style="border:1px solid lightgray;border-top:none;height:400px" class="form-group">
+          <div class="tab-content" style="padding-top:22px">
+               <div role="tabpanel" class="tab-pane active" id="login">
+                   <div class="form-group">
+                        <div class="col-xs-11" style="margin-left:5%">
+                   	       <input type="text" class="form-control" id="lname"  onfocus="login2()">
+                   	    </div>
+                         <ul class="col-xs-8 col-xs-offset-3" id="lkong1"></ul>
+                   </div>
+                   <div class="form-group">
+                        <div class="col-xs-11" style="margin-left:5%">
+                   	       <input type="password" class="form-control" id="lpass"  onfocus="login3()">
+                   	    </div>
+                         <ul class="col-xs-8 col-xs-offset-3" id="lkong2"></ul>
+                   </div>
+                   <div class="form-group">
+                   	   <div class="col-xs-5 col-xs-offset-7">
+                   	   	   <span class="glyphicon glyphicon-qrcode"></span>&nbsp;Qrcode&nbsp;&nbsp;<span class="glyphicon glyphicon-phone"></span>&nbsp;SMS
+                   	   </div>
+                   </div>
+                   <div class="form-group">
+                      <div class="col-xs-11" style="margin-left:5%"> 
+                   	   <button class="btn btn-primary btn-block login" id="login" onclick="login()">Login</button>
+                   	  </div>
+                   </div>
+                   <div class="form-group">
+                   	   <div class="col-xs-11" style="margin-left:5%">
+                   	   	   <label class="checkbox-inline">
+                           <input type="checkbox" id="st"><label for="st">Stay in</label>
+                           </label>
+                   	   </div>
+                   </div>
+                   <div class="form-group">
+                   	   <div class="col-xs-5 col-xs-offset-7" style="color:#2d88c1">Forget password?</div>
+                   </div>
+               </div><!-- login -->
+               <div role="tabpanel" class="tab-pane" id="register">
+                  <form class="form-horizontal">
+               	   <div class="form-group">
+               	   	     <label for="user" class="col-xs-3 control-label">user</label>
+               	   	     <div  class="col-xs-8" >
+               	   	     <input type="text" class="form-control" id="user" onblur="check1()" name="uname" onfocus="qing1()">
+               	   	     </div>
+                          <div class="col-xs-8 col-xs-offset-3" id="kong"></div>
+               	   </div>
+               	   <div class="form-group">
+               	   	    <label for="pass" class="col-xs-3 control-label">Password</label>
+               	   	    <div class="col-xs-8">
+               	   	  	 <input type="password" class="form-control" id="pass" onblur="check2()"  onfocus="qing2()" name="upass">
+               	   	    </div>
+                         <div class="col-xs-8 col-xs-offset-3" id="kong2"></div>
+               	   </div>
+               	   <div class="form-group">
+               	   	    <label class="col-xs-3 control-label">Gender</label>
+                        <div class="col-xs-8">
+                        	<label class="radio-inline">
+								        <input type="radio" name="ugender" value="m" id="male"/> Male
+							           </label>
+							           <label class="radio-inline">
+								            <input type="radio" name="ugender" value="f"/> Female
+							           </label>
+                        </div>
+               	   </div>
+               	   <div class="form-group">
+               	   	   <label for="phone" class="col-xs-3 control-label">Mobile Ph</label>
+                       <div class="col-xs-8">
+                       	  <input type="text" class="form-control" id="phone" onblur="check3()"  onfocus="qing3()" name="uphone">
+                       </div>
+                        <div class="col-xs-8 col-xs-offset-3" id="kong3"></div>
+               	   </div>
+               	   <div class="form-group">
+               	     <div class="col-xs-11" style="padding-left:25px;padding-right:0">
+               	   	  <p class="form-control-static">When you <strong>Register</strong>,you agree to our <span style="color:#2d88c1">User Agreement</span> and axknowledge reading our <span style="color:#2d88c1">User Privacy Notice</span>.</p>
+               	   	  </div>
+               	   </div>
+                  </form>
+                    <div class="form-group">
+                      <div class="col-xs-11" style="padding-left:25px;padding-right:0">
+                       <button type="button" class="btn btn-primary btn-block disabled register"  onclick="register()">register</button>
+                      </div>
+                   </div>
+               </div>
+          </div>
+       </div>
+	 
+                 
+	</div>
+	</div>
+  </div>
+
+
+</body>
+</html>

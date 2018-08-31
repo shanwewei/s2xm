@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="Bootstrap/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="Bootstrap/bootstrap/css/bootstrap-theme.css" />
+	<script src="bootstrap/bootstrap/js/jquery-1.11.2.min.js"></script>
+    <script src="bootstrap/bootstrap/js/bootstrap.js"></script>
+    <script src="watchlist.js"></script>
+     <script src="head.js"></script>
+    <link rel="stylesheet" href="watchlist.css">
+    <script src="template-debug.js"></script>
+    <style>
+        html,body {
+          height: 100%;
+        }
+    
+      body > .wrap {
+        min-height: 100%;
+      }
+    
+     
+    </style>
+</head>
+<body>
+
+	<div id="nav"></div>
+	<!-- <div class="container"> -->
+		<div class="col-xs-8 col-xs-offset-2">
+			<!-- 注意：广告轮播图片应该要确保宽高裁切一致 -->
+			<!-- data-ride="carousel"	允许轮播 -->
+			<!-- data-interval="2000"	每2s轮播 -->
+			<!--  data-pause="null"		鼠标悬停继续轮播 -->
+			<div id="advs" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="null">
+			  <!-- 圆圈指示器 -->
+			  <ol class="carousel-indicators" id="slt">
+			    <li data-target="#advs" data-slide-to="0"></li>
+			    <li data-target="#advs" data-slide-to="1" class="active"></li>
+			     <li data-target="#advs" data-slide-to="2" class="active"></li>
+			  </ol>
+			
+			  <!-- 轮播广告项 -->
+			  <div class="carousel-inner" role="listbox" id="sl">
+			    <div class="item">
+			      <img src="images/800x100.png" />
+			    </div>
+			    <div class="item">
+			      <img src="images/800x100.png" />
+			    </div>
+			    <div class="item active">
+			      <img src="images/800x100.png" />
+			    </div>
+			</div>
+	    </div>
+	</div>
+	</div>
+<div class="row wrap" id="pageb">	
+	<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"  id="act"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Activity</a></li>
+      <li role="presentation" class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Messages <span class="caret"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+          <li><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">@fat</a></li>
+          <li class=""><a href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">@mdo</a></li>
+        </ul>
+      </li>
+      <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Account</a></li>
+      <li id="chan">Change Settings</li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+         <div id="home2">
+         	<div id="left">
+         		<button type="button" class="btn btn-default">Summary</button>
+         		<button type="button" class="btn btn-default">Recently viewed</button>
+         		<button type="button" class="btn btn-default">Watch list</button>
+         		<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span>Buy</button>
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-down"></span>Sell</button>
+            <div id="leftd">
+              <ul>Sold</ul>
+              <ul>Unsold</ul>
+              <ul>Returns</ul>
+            </div>
+         	</div>
+         	<div id="right">
+            <div id="right1">Watch list</div>
+            <div id="right2">
+                <input type="checkbox" id="quanx"><button  type="button" class="btn btn-default" onclick="deleteinput()">Delete</button>
+            </div>
+            <div id="right3">
+                <button  type="button" class="btn btn-primary">All Categones(2)</button>
+                <button  type="button" class="btn btn-default">Postcards(1)</button>
+                <button  type="button" class="btn btn-default">Photographs(1)</button>
+            </div>
+            <script id="a" type="text/html">
+            {{each source as $index $item}}
+              <div class="right4">
+                <input type="checkbox" name="inputs"  haha="{{$index.sid}}">
+                <div id="a">
+                  <div id="aa">
+                    <img src="detail2.php?imgid={{$index.imgid}}">
+                  </div>
+                </div>
+                <div id="b">
+                    <a onclick="titlewatch({{$index.sid}})">{{$index.title}}</a>
+                    <ul>{{$index.subtitle}}</ul>
+                </div>
+                <div id="c">
+                    <ul>{{$index.pub_date}}</ul>
+                    <ul>adv</ul>
+                    <ul>avv</ul>
+                </div>
+                <div id="d">
+                    <ul>{{$index.cond}}</ul>
+                    <ul>adv</ul>
+                    <ul>avv</ul>
+                </div>
+                <div id="e">
+                     <button  type="button" class="btn btn-primary">Bid now</button> 
+                     <div>viewwenck</div>
+                     <div>more actions <span class="caret"></span></div>
+                </div>
+               </div>
+            {{/each}}
+            </script>
+           <div id="rbig">
+             
+           </div>
+                
+           
+         </div>
+         </div>
+      </div>
+        <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+        d1rjtrt
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+       d2rtgfjmrykm
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+      ptyjuyt
+      </div>
+    </div>
+  	</div>
+  <!-- </div> -->
+
+  <div id="foot">
+    
+  </div>
+</body>
+</html>

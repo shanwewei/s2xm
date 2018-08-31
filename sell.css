@@ -1,0 +1,67 @@
+#bign{
+	background: white;
+}
+#form2>div>label:first-child{
+   font-size: 20px;
+   color: black;
+   font-weight: 4;
+   line-height: 30px;
+}
+#d1>span,button{
+   font-size: 18px;
+}
+#menu1{
+	min-width:0px;
+	width:100px;
+}
+#newb:hover{
+	text-decoration:underline;
+}
+.font1{
+	font-size:16px;
+	font-style:italic;
+}
+.forphoto{
+	border:1px dashed lightgray;
+	width:115px;
+	height:110px;
+}
+#photos>span:nth-child(n+2){
+	margin-left:10px;
+}
+.textafter{
+	font-style:italic;
+}
+#blast{
+	width: 150px;
+}
+#foot{
+	float: left;
+	width: 100%;
+	height: 100px;
+	background: white;
+	margin-top: 80px;
+}
+#foot>span{
+	float: left;
+	margin-left: 20px;
+	padding-top: 30px;
+}
+#foot>span:first-child{
+	margin-left: 200px;
+}
+#foot>div{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.tooltip{
+	width: 150px;
+}
+// #tool1{
+// 	width: 165px;
+// 	padding-right: 0px;
+// }
+#tool2{
+	width: 800px;
+}

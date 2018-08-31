@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" />
+<script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<style>
+</style>
+<body style="margin: 20px;">
+	<div class="container-fluid" style="min-width: 900px;">
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="user" class="col-xs-2 control-label">Name</label>
+						<div class="col-xs-10">
+							<input class="form-control" id="user" placeholder="Enter user name" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="pass" class="col-xs-2 control-label">Pass</label>
+						<div class="col-xs-10">
+							<input class="form-control" id="pass" placeholder="Enter user password" type="password" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-xs-2 control-label">Gender</label>
+						<div class="col-xs-10">
+							<label class="radio-inline">
+								<input type="radio" name="gender" value="f" checked/> Female
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="gender" value="m"/> Male
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-xs-2 control-label">Favs</label>
+						<div class="col-xs-10">
+							<label class="radio-inline" style="padding-left: 0px;">
+								<input type="checkbox" name="favs" value="r" checked/> Read
+							</label>
+							<label class="radio-inline" style="padding-left: 5px;">
+								<input type="checkbox" name="favs" value="w"/> Write
+							</label>
+							<label class="radio-inline" style="padding-left: 5px;">
+								<input type="checkbox" name="favs" value="s" checked/> Swim
+							</label>
+							<label class="radio-inline" style="padding-left: 5px;">
+								<input type="checkbox" name="favs" value="m"/> Music
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-xs-2 control-label">Course</label>
+						<div class="col-xs-10">
+							<select class="form-control input-sm" style="width: 50%;">
+								<option>Java</option>
+								<option>Web</option>
+								<option>iOS</option>
+								<option>Android</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="desc" class="col-xs-2 control-label">Desc</label>
+						<div class="col-xs-10">
+							<textarea id="desc" class="form-control" style="resize: none;">Pls input something ...</textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="image" class="col-xs-2" style="text-align: right">Image</label>
+						<div class="col-xs-10">
+							<input type="file" id="image"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="cash" class="col-xs-2 control-label">Cash</label>
+						<div class="col-xs-10">
+							<div class="form-group" style="width: 50%; padding-left: 15px;">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" placeholder="Amount"/>
+									<div class="input-group-addon">.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox col-xs-offset-2" style="padding-left: 15px;">
+							<label>
+								<input type="checkbox"/> Remember me
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-xs-offset-2">
+							<button class="btn btn-success">Register</button>
+						</div>
+						<div class="col-xs-3 col-xs-offset-2">				
+							<button class="btn btn-default">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

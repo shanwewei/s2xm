@@ -1,0 +1,168 @@
+#nav>div{
+	background: #f8f8f8;
+	margin-top: -7px;
+}
+#big{
+	display: flex;
+	width: 100%;
+	height: 1100px;
+	background: #f8f8f8;
+}
+.left{
+	width: 20%;
+	height: 100%;
+	/* border: 1px solid black; */
+}
+.middle{
+	width: 60%;
+	height: 50%;
+	/* border: 1px solid red; */
+	background: white;
+}
+.right{
+	width: 10%;
+	height: 45%;
+	/* border: 1px solid black; */
+	margin-left: 20px;
+}
+.left>div{
+	margin: 44px 29px;
+}
+.left>div>div{
+     padding-bottom: 10px;
+     font-weight: bold;
+}
+.left>div li{
+	list-style-type: none;
+}
+.left>div:first-child>ul{
+	color: #55a2c0;
+}
+.left>div:nth-child(2) label{
+	margin-left: 10px;
+}
+.left>div:nth-child(3) label{
+	margin-left: 10px;
+}
+#droppp{
+	width: 50px;
+    margin-right: 0;
+    display: inline;
+}
+#droppp1{
+	width: 50px;
+    margin-right: 0;
+    display: inline;
+}
+.input1{
+	width: 50px;
+}
+#s1{
+	font-size: 18px;
+	margin-top: 12px;
+}
+.left>div{
+	border-bottom: 1px dashed lightgray;
+	padding-bottom: 10px;
+}
+.left>div:nth-child(5){
+	border-bottom: 0;
+	padding-bottom: 0px;
+}
+.left>div:nth-child(6){
+	border-bottom: 0;
+	padding-bottom: 0px;
+}
+#buttons>div{
+	width: 80px;
+
+}
+.middle>div>div:nth-child(2){
+	float: right;
+	width: 250px;
+	display: flex;
+}
+.middle>div>div:nth-child(2)>div{
+	margin-left: 13px;
+	line-height: 34px;
+}
+.middle>div{
+	margin-top: 10px;
+}
+#middle2>span{
+	margin-left: 20px;
+}
+#middle2>span:nth-child(2){
+	color: #34779b;
+	margin-left: 30px;
+}
+#middle2>div{
+	float: right;
+}
+#bo1{
+	width: 100%;
+	height: 220px;
+	border: 1px solid lightgray;
+	display: flex;
+}
+#bo01{
+	width: 15%;
+	height: 180px;
+	margin-top: 15px;
+	margin-left: 40px;
+	margin-right: 0;
+}
+#bo01>img{
+	width: 100%;
+	height: 100%;
+}
+#bo02{
+	width: 80%;
+	height: 200px;
+	/* border: 1px solid lightgray; */
+	margin-top: 10px;
+	margin-left: 30px;
+}
+#title1{
+	color:#34779b ;
+	font-size: 20px;
+	width: 100%;
+	margin-left: 86px;
+}
+#pay1,#pay2,#pay3{
+	width: 100%;
+	margin-left: 86px;
+}
+#bo02>div{
+	margin-top: 10px;
+}
+#pay1>span:nth-child(3),#pay3>span:nth-child(3),#pay2>span:nth-child(3){
+	margin-left: 80px;
+}
+#pay1>span,#pay3>span,#pay2>span{
+	font-weight: bold;
+}
+.right>img{
+	width: 100%;
+	height: 100%;
+}
+#pay2>span:nth-child(2){
+	padding-left: 80px;
+}
+
+#payimg{
+	padding-left: 80px;
+}
+#btns{
+	margin-left: 50%;
+}
+
+
+
+
+
+
+
+
+
+

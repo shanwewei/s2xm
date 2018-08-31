@@ -1,0 +1,22 @@
+<!-- 支持html5和css3语法 -->
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 兼容最新的IE版本 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- 加载css -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<!-- 主题 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" />
+<!-- 加载js，先加载jQuery，因为bootstrap引用jQuery中的选择器和动画 -->
+<script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<body>
+	Hello :)
+	<!-- 所有原属性方式定义的样式全部被bootstrap样式覆盖 -->
+	<hr color="red" size="1" noshade />
+	<!-- 同上 -->
+	<hr style="background-color: blue; height: 1px; border: none;" />
+	<h1>Hello</h1>
+</body>
+</html>

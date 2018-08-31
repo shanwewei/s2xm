@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  
+	<link rel="stylesheet" href="Bootstrap/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="Bootstrap/bootstrap/css/bootstrap-theme.css" />
+ 
+    <script src="bootstrap/bootstrap/js/jquery-1.11.2.min.js"></script>
+    <script src="bootstrap/bootstrap/js/bootstrap.js"></script>
+     <script src="./ueditor/ueditor/ueditor.config.js"></script>
+    <script src="./ueditor/ueditor/ueditor.all.js"></script>
+    <script src="./ueditor/ueditor/lang/en/en.js"></script>
+    <script src="sell.js"></script>
+    <link rel="stylesheet" href="sell.css">
+    <script src="head.js"></script>
+
+</head>
+<body style="background:#f8f8f8">
+<div>
+  <div id="nav"></div>
+</div>
+   <div style="width:100%;height:70px;float:left">
+      <h2>Create your listing</h2>
+   </div>
+     <div class="col-xs-11 col-xs-offset-1" id="bign">
+            <h3>Produce details</h3>
+           <form class="form-horizontal" id="form2" action="sell1.php" method="post" enctype="multipart/form-data">
+              <div class="form-group has-error">
+                  <label for="title" class="col-xs-2">*Title</label>
+              <div class="col-xs-5">
+              <input type="text" class="form-control" id="title" name="title"/>
+            </div>
+            <div class="col-xs-3">
+            <label class="control-label ">Required!</label>
+            </div>
+          </div>
+           <div class="form-group has-error">
+           <label for="title" class="col-xs-2" id="tool1">*Subtitle<span class="font1">($0.19)
+                <span class="glyphicon glyphicon-info-sign"  data-toggle="tooltip" data-placement="right" title="Pay after a deal done!"></span>
+           </span>
+             
+           </label>
+              <div class="col-xs-5">
+              <input type="text" class="form-control" id="sub"  name="subtitle"/>
+            </div>
+            <div class="col-xs-3">
+            <label class="control-label ">Must more than 12 charts!</label>
+            </div>
+          </div>
+          <div class="form-group has-error" id="d1">
+             <label class="col-xs-2">*Categray</label>  
+             <span class="col-xs-5">Collectibles&nbsp;/&nbsp;Postcards&nbsp;/&nbsp;China
+                 <button  class="btn btn-default" >Change categray</button>
+             </span>           
+          </div>
+          <div class="form-group has-error">
+               <label class="col-xs-2">*Condition</label>
+               <span class="col-xs-5 ">
+                   <div class="btn-group">
+          <button class="btn btn-default dropdown-toggle btn-lg" type="button" data-toggle="dropdown" style="width: 80px;color:blue" id="newb">
+            <span id="new">New</span>
+            <span class="caret"></span> <!-- 下拉箭头 -->
+          </button>
+           <input style="display:none" name="cond" id="cond1">
+          <ul class="dropdown-menu" id="menu1">
+            <li><a href="#new1" onclick="new1(this)">New</a></li>
+            <li><a href="#used1"  onclick="used1(this)">Used</a></li>
+          </ul>
+        </div>
+            </span>     
+          </div>
+           <div class="form-group has-error">
+             <label class="col-xs-2" for="photo">*Photos</label>  
+             <span class="col-xs-10" id="photos"></span>  
+              <div class="col-xs-3 col-xs-offset-2" id="tool2">
+                <input type="checkbox">Add watermark<span class="textafter">($0.01 per photo)
+                  <span class="glyphicon glyphicon-info-sign"  data-toggle="tooltip" data-placement="right" title="Pay after a deal done!"></span>
+                  </span>
+               </div>         
+          </div>
+           <div class="form-group has-error">
+              <label class="col-xs-2" for="price">*Price</label>   
+              <span class="col-xs-2">
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="usd">USD$</span><span class="caret"></span></button>
+                      <ul class="dropdown-menu" id="curr">
+                        <li><a>USD$</a></li>
+                        <li><a>GBP</a></li>
+                        <li><a>RMB</a></li>
+                        <li><a>EUR</a></li>
+                      </ul>
+                     </div>
+                    <input type="text" class="form-control" id="price" name="price">
+                  </div>
+                   <input style="display:none" name="curr" id="curr1">
+              </span>
+             <div class="col-xs-2">
+              <label class="control-label ">Invalid</label>
+            </div>  
+          </div>
+           <div class="form-group has-error">
+              <label class="col-xs-2" for="price">*Payments</label>   
+              <span class="col-xs-2">
+                  <input type="checkbox" name="payment" id="pay1" value="pal">
+                  <img src="images/pal.png">
+              </span>
+              <span class="col-xs-4">
+                 <input type="checkbox" name="payment" value="vis">
+                  <img src="images/vis.png">
+              </span>
+          </div>
+           <div class="form-group has-error">
+              <label class="col-xs-2" for="price">*Description</label> 
+              <span class="col-xs-8">
+                 <textarea id="contents" name="desc"></textarea>
+              </span>             
+          </div>
+            <div class="form-group has-error">
+              <span class="col-xs-5 col-xs-offset-2">
+                 <input type="checkbox">I accept the sales agreement
+              </span>             
+          </div>
+           <div class="form-group has-error">
+              <span class="col-xs-5 col-xs-offset-3">
+                <button  class="btn btn-primary btn-lg" id="blast">Publish</button>
+              </span>             
+          </div>
+        </form>
+     </div>
+     <div id="foot">
+     </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="Bootstrap/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="Bootstrap/bootstrap/css/bootstrap-theme.css" />
+ 
+    <script src="bootstrap/bootstrap/js/jquery-1.11.2.min.js"></script>
+    <script src="bootstrap/bootstrap/js/bootstrap.js"></script>
+    <script src="index.js"></script>
+       <link rel="stylesheet" href="index.css">
+      <script src="template-debug.js"></script> 
+      <script src="head.js"></script>
+      <style>
+		  html,body {
+          height: 100%;
+        }
+    
+      body > .wrap {
+        min-height: 100%;
+      }
+      </style>
+</head>
+<body>
+	<div id="nav"></div>
+	<div id="big" class="wrap">
+	  <div class="left">
+	  	<div>
+	  		<div>Categories</div>
+	  		<ul>
+	  			<li>Collectibles</li>
+	  			<li>Stamps</li>
+	  			<li>Books</li>
+	  			<li>Art</li>
+	  		</ul>
+	  	</div>
+	  	<div>
+	  		<div>Guaranteed Delivery</div>
+	  		<ol>
+	  		 	<li>
+	  				<input type="radio" id="one" name="gu"><label for="one">1 Day Shipping</label>
+	  		 	</li>
+	  		 	<li>
+	  				<input type="radio" id="two" name="gu"><label for="two">2 Day Shipping</label>
+	  		 	</li>
+	  		 	<li>
+	  				<input type="radio" id="three" name="gu"><label for="three">3 Day Shipping</label>
+	  		 	</li>
+	  		</ol>
+	  	</div>
+	  	<div>
+	  		<div>Condition</div>
+	  		<ul>
+	  			<li>
+	  				<input type="checkbox" id="new"><label for="new">New</label>
+	  			</li>
+	  			<li>
+	  				<input type="checkbox" id="used"><label for="used">Used</label>
+	  			</li>
+	  		</ul>
+	  	</div>
+	  	<div>
+	  		<div>Price</div>
+	  		<span>
+	  		<div class="dropdown"   id="droppp1">
+                 <div class="dropdown-toggle" data-toggle="dropdown"  id="droppp">
+                     <span>RMB</span>
+                     <span class="caret"></span>
+                 </div>
+                 <ul class="dropdown-menu">
+                      <li><a href="#">USD</a></li>
+                      <li><a href="#">GBP</a></li>
+                      <li><a href="#">EUR</a></li> 
+                  </ul>
+               </div>
+            <span>
+               <input type="text" class="input1">~<input type="text"  class="input1">
+            <div id="s1">Recently Viewed Items</div>
+            </div> 
+            <div>
+	  		  <img src="images/s-l140.jpg">
+	  		  <div>CHINA NANKING MING TO...</div>
+	  		  <div>RMB  85.96</div>
+	  	    </div> 
+	  	    <div>
+	  		  <img src="images/s-l141.jpg">
+	  		  <div>CHINA NANKING MING TO...</div>
+	  		  <div>RMB  45.52</div>
+	  	    </div>          
+	  	</div>	  		
+	  	    <div class="middle">
+				<div>
+  					<div class="btn-group">
+  						<button type="button" class="btn btn-default">All Listing</button>
+  						<button type="button" class="btn btn-default">Auction</button>
+  						<button type="button" class="btn btn-default">Buy it Now</button>
+					</div>
+					<div>
+						<div>Sort</div>
+						<div class="btn-group">
+  						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    					Action <span class="caret"></span>
+  						</button>
+  						<ul class="dropdown-menu">
+    						<li><a href="#">Action</a></li>
+    						<li><a href="#">Another action</a></li>
+  						</ul>
+						</div>
+						<div>View</div>
+						<div class="btn-group">
+  						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    					<span class="glyphicon glyphicon-th-list"></span><span class="caret"></span>
+  						</button>
+  						<ul class="dropdown-menu">
+    						<li><a href="#">Action</a></li>
+    						<li><a href="#">Another action</a></li>
+  						</ul>
+						</div>
+					</div>
+				</div>
+				<div id="middle2">
+					<span>1,582 results nanking</span>
+					<span><span class="glyphicon glyphicon-pushpin"></span>Save this search</span>
+					<div>
+						<span>Best seller</span>
+						<canvas id="canvas" width="70px" height="25px"></canvas>
+					</div>
+				</div>
+				<div id="rbig">
+					
+				</div>
+				 <script id="a" type="text/html">
+				  {{each source as $index $item}}
+				 <div id="bo1">
+					<div id="bo01"><img src="detail2.php?imgid={{$index.imgid}}"></div>
+					<nav id="bo02">
+						<a id="title1" onclick="t1({{$index.sid}})">{{$index.title}}</a>
+						<div id="pay1">
+							<span>{{$index.curr}}</span>
+							<span>{{$index.price}}</span>
+							<span>{{$index.pub_date}}</span>
+						</div>
+						<div id="pay2">
+							<span>Buy it now</span>
+							<span>From united states</span>
+						</div>
+						<div id="pay3">
+							<span>+rmb skiping</span>
+							<span id="payimg"><img src='./images/{{$index.payment}}.png'></span>
+						</div>
+					</nav>
+				</div> 
+				{{/each}}
+				</script>
+				<div class="btn-group" id="btns">
+  					<button type="button" class="btn btn-default" id="prev"><span class="glyphicon glyphicon-chevron-left" ></span></button>
+  					<button type="button" class="btn btn-default" id="first">1</button>
+  					<button type="button" class="btn btn-default" id="second">2</button>
+  					<button type="button" class="btn btn-default" id="third">3</button>
+  					<button  id="next" type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
+				</div>
+
+
+	  	    </div>
+	        <div class="right">
+	        	<img src="images/ads.jpg">
+	        </div>
+	  </div>
+	 <div id="foot"></div>
+	
+</body>
+</html>

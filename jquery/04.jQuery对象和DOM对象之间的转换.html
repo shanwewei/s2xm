@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery/jquery1.9/jquery-1.9.0.js"></script>
+	<script>
+		$(function(){
+			//1.将DOM对象转换为Jquery对象
+			var divDom=document.getElementById("mydiv");//DOM对象
+			var divJq=$(divDom);//jQuery对象
+			console.log("使用DOM对象获取："+divDom.innerHTML);
+			console.log("使用jQuery对象获取："+divJq.html());
+			//2.将jQuery对象转换为DOM对象
+			var mydivJq=$("#mydiv");//Jquery对象，实际上都是一个集合，那这个集合中只包含一个元素
+			var mydivDom=mydivJq[0];//DOM对象
+			var mydivDom2=mydivJq.get(0);//DOM对象
+			console.log("使用DOM对象获取："+mydivDom.innerHTML);
+			console.log("使用DOM对象获取："+mydivDom2.innerHTML);
+			console.log("使用jQuery对象获取："+mydivJq.html());
+
+		});
+	</script>
+</head>
+<body>
+	<div id="mydiv">郭德伟</div>
+</body>
+</html>

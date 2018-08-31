@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" />
+<script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<style>
+</style>
+<body style="margin: 20px;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<form>
+					<div class="form-group">
+						<label for="user">Name</label>
+						<input class="form-control" id="user" placeholder="Enter user name" />
+					</div>
+					<div class="form-group">
+						<label for="pass">Pass</label>
+						<input class="form-control" id="pass" placeholder="Enter user password" type="password" />
+					</div>
+					<div class="form-group">
+						<label>Gender</label>
+						<div>
+							<label class="radio-inline">
+								<input type="radio" name="gender" value="f" checked/> Female
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="gender" value="m"/> Male
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Favs</label>
+						<div>
+							<label class="radio-inline" style="padding-left: 0px;">
+								<input type="checkbox" name="favs" value="r" checked/> Read
+							</label>
+							<label class="radio-inline">
+								<input type="checkbox" name="favs" value="w"/> Write
+							</label>
+							<label class="radio-inline">
+								<input type="checkbox" name="favs" value="s" checked/> Swim
+							</label>
+							<label class="radio-inline">
+								<input type="checkbox" name="favs" value="m"/> Music
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Course</label>
+						<select class="form-control" style="width: 50%;">
+							<option>Java</option>
+							<option>Web</option>
+							<option>iOS</option>
+							<option>Android</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="desc">Desc</label>
+						<textarea id="desc" class="form-control" style="resize: none;">Pls input something ...</textarea>
+					</div>
+					<div class="form-group">
+						<label for="image">Image</label>
+						<input type="file" id="image"/>
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"/> Remember me
+							</label>
+						</div>
+					</div>
+					<div style="text-align: center;">
+						<button class="btn btn-success">Register</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<button class="btn btn-default">Cancel</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
